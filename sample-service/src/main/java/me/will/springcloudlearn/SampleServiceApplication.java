@@ -16,10 +16,4 @@ public class SampleServiceApplication {
     public static void main(String[] args) {
         SpringApplication.run( SampleServiceApplication.class, args );
     }
-
-    @Bean
-    @LoadBalanced
-    RestTemplate restTemplate() {
-        return new RestTemplate();
-    }
 }
