@@ -28,6 +28,8 @@
         <module>gateway</module>
         <module>sample-service</module>
         <module>service-hi</module>
+        <module>service-feign</module>
+        <module>service-zuul</module>
     </modules>
 
     <dependencies>
