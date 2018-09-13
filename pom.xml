@@ -23,11 +23,11 @@
 
     <modules>
         <module>eureka-server</module>
-        <module>eureka-client</module>
         <module>service-ribbon</module>
         <module>config</module>
         <module>gateway</module>
         <module>sample-service</module>
+        <module>service-hi</module>
     </modules>
 
     <dependencies>

@@ -8,10 +8,10 @@ import org.springframework.web.client.RestTemplate;
 public class HelloService {
 
     @Autowired
-    RestTemplate restTemplate;
+    private RestTemplate restTemplate;
 
     public String hiService(String name) {
-        return restTemplate.getForObject("http://eureka-client/hi?name="+name,String.class);
+        return restTemplate.getForObject("http://service-hi/hi?name="+name,String.class);
     }
 
 }

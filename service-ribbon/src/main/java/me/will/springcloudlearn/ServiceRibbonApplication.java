@@ -13,13 +13,13 @@ import org.springframework.web.client.RestTemplate;
 @EnableEurekaClient
 @EnableDiscoveryClient
 public class ServiceRibbonApplication {
-    public static void main(String[] args) {
-        SpringApplication.run( ServiceRibbonApplication.class, args );
-    }
-
     @Bean
     @LoadBalanced
-    RestTemplate restTemplate() {
+    public RestTemplate restTemplate() {
         return new RestTemplate();
+    }
+
+    public static void main(String[] args) {
+        SpringApplication.run( ServiceRibbonApplication.class, args );
     }
 }

@@ -1,20 +1,18 @@
 package me.will.springcloudlearn.controller;
 
-import me.will.springcloudlearn.service.HelloService;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping
-public class HelloController {
-    @Autowired
-    private HelloService helloService;
+public class HiController {
+    @Value("${server.port}")
+    private String port;
 
     @RequestMapping("/hi")
-    public String hi(@RequestParam String name) {
-        return helloService.hiService( name );
+    public String home(@RequestParam(value = "name", defaultValue = "forezp") String name) {
+        return "hi " + name + " ,i am from port:" + port;
     }
-
 }
