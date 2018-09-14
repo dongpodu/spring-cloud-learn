@@ -10,6 +10,7 @@
     </parent>
 
     <artifactId>service-ribbon</artifactId>
+    <description>负载均衡</description>
 
     <dependencies>
         <dependency>
